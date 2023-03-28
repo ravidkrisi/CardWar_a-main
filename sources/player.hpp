@@ -1,6 +1,7 @@
 #pragma once 
 
 #include <string>
+using namespace std;
 
 namespace ariel
 {
@@ -21,10 +22,10 @@ namespace ariel
             int cardesTaken(); // this method print the amount of cards the Player has won
     };
 
-    // define constructor 
-    Player::Player(string name)
-    {
-        this->name = name; 
-    }
+    // // define constructor 
+    // Player::Player(string name)
+    // {
+    //     this->name = name; 
+    // }
 }
 

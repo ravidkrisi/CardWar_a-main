@@ -12,31 +12,30 @@ namespace ariel {
 
         public:
             // declare constructor and deconstructor
-            Card(); // defaultive constructor 
-            Card(int sign, int value);
+            Card(int sign, int value); // constructor
             ~Card(); //deconstructor 
             // declare set get functions 
             void setSign(int sign);
             void setValue(int value);
     };
 
-    void Card::setSign(int sign)
-    {
-        if(sign == 1)
-        {
-            CardSign(SPADES);
-        }
-        if(sign == 2)
-        {
-            CardSign(HEARTS);
-        }
-        if(sign == 3)
-        {
-            CardSign(CLUBS);
-        }
-        if(sign == 4)
-        {
-            CardSign(DIAMONDS);
-        }
-    }
+    // void Card::setSign(int sign)
+    // {
+    //     if(sign == 1)
+    //     {
+    //         CardSign(SPADES);
+    //     }
+    //     if(sign == 2)
+    //     {
+    //         CardSign(HEARTS);
+    //     }
+    //     if(sign == 3)
+    //     {
+    //         CardSign(CLUBS);
+    //     }
+    //     if(sign == 4)
+    //     {
+    //         CardSign(DIAMONDS);
+    //     }
+    // }
 }

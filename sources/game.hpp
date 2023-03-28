@@ -13,7 +13,6 @@ namespace ariel {
         
     public:
         // declare constructor and deconstructor 
-        Game();                      
         Game(Player p1, Player p2);
         ~Game();
         // decalare functions
@@ -24,19 +23,4 @@ namespace ariel {
         void printLog(); // prints all the turns played one line per turn (same format as game.printLastTurn())
         void printStats(); // for each player prints basic statistics: win rate, cards won, <other stats you want to print>. Also print the draw rate and amount of draws that happand. (draw within a draw counts as 2 draws. )
     };
-    // define constructor 
-    Game::Game(Player p1, Player p2)
-    {
-        this->p1 = p1;
-        this->p2 = p2;
-    }
-    
-    Game::~Game()
-    {
-    }
-
-    void Game::playTurn()
-    {
-        
-    }
 }
