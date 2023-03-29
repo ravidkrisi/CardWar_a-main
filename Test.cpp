@@ -25,6 +25,9 @@ TEST_CASE("test demo functions")
     CHECK_THROWS(Game(player_1, player_1)); // check if exception thrown when starting game with the same player 
     Game first_game(player_1, player_2);
 
+    CHECK_THROWS(first_game.playTurn()); // check if exception thrown when call playTurn without players
+    CHECK_THROWS(first_game.playAll()); // check if exception thrown when call playAll without players 
+
     //check players stack when game created
     CHECK(player_1.stacksize() == 26); // check if p1 has 26 cards when game starts
     CHECK(player_2.stacksize() == 26); // check if p2 has 26 cards when game starts
@@ -51,4 +54,7 @@ TEST_CASE("test demo functions")
     CHECK(or_bool == true); // check if p1 or p2 has win and took cards 
     
     CHECK(player_1.cardesTaken()+player_1.stacksize()+player_2.cardesTaken()+player_2.stacksize() == 52); // check if all stacks size is 52
+
+    CHECK_THROWS(first_game.playTurn()); // check if exception thrown when playTurn after game finished 
+    CHECK_THROWS(first_game.playAll()); // check if exception thrown when playALl after game finished 
 }
