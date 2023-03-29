@@ -25,8 +25,9 @@ TEST_CASE("test demo functions")
     CHECK_THROWS(Game(player_1, player_1)); // check if exception thrown when starting game with the same player 
     Game first_game(player_1, player_2);
 
-    CHECK_THROWS(first_game.playTurn()); // check if exception thrown when call playTurn without players
-    CHECK_THROWS(first_game.playAll()); // check if exception thrown when call playAll without players 
+    CHECK_THROWS(first_game.printLog()); // check if exception thrown when call printLog before game starts  
+    CHECK_THROWS(first_game.printStats()); // check if exception thrown when call printStats before game starts  
+    CHECK_THROWS(first_game.printWiner()); // check if exception thrown when call printWiner before game starts 
 
     //check players stack when game created
     CHECK(player_1.stacksize() == 26); // check if p1 has 26 cards when game starts
